@@ -1,0 +1,15 @@
+.navbar-container {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-lista {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    list-style: none;
+}

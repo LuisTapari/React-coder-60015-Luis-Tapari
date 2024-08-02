@@ -1,0 +1,10 @@
+.tituloSaludo{
+    font-size: 24px;
+    color: white;
+}    
+
+.Body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
