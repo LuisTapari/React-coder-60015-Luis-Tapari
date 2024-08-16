@@ -1,17 +1,24 @@
 import { CartWidget } from "../CartWidget/CartWidget"
 import "./Navbar.css";
+import { Link, NavLink } from "react-router-dom"
 const Navbar = () => {
-    const categorias = ["Instrumentales", "soundKits", "Mix"];
     return (
         <nav className="navbar-container">
-            <div className="container">
-            <h1> BullBeat </h1>
+            <div className="container-nav">
+            <Link to= "/" className="logo">BullBeat</Link>
             <ul className="navbar-lista">
-                {categorias.map((categoria) => (
-                <li key={categoria}>
-                <a href="{categoria}">{categoria}</a>
+                <li>
+                    <Link to = "/category/Instrumentales" className="link">Instrumentales</Link>
                 </li>
-            ))}
+                <li>
+                    <Link to = "/category/Soundkit" className="link">SoundKits</Link>
+                </li>
+                <li>
+                    <Link to = "/category/Producciones" className="link">Producciones</Link>
+                </li>
+                <li>
+                    <Link to = "/category/Promociones" className="link">Promociones</Link>
+                </li>
             </ul>
             </div>
             <CartWidget />
