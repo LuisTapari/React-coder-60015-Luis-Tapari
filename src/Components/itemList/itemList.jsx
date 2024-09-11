@@ -1,18 +1,23 @@
-import Item from "../item/item"
-import "./itemList.css";
+import Item from "../Item/Item";
+import "./ItemList.css";
 
+const ItemList = ({ productos, categoryId }) => {
+    const getTitle = () => {
+        if (!categoryId) {
+            return "Productos";
+        }
+        return categoryId.charAt(0).toUpperCase() + categoryId.slice(1);
+    };
 
-const ItemList = ( {productos} ) => {
+    return (
+        <div className="container">
+            <h2 className="main-title">{getTitle()}</h2>
 
-return (
-    <div className="container">
-        <h2 className="main-title">Productos</h2>
-
-        <div className="productos">
-            { productos.map((prod) => <Item producto={prod} key={prod.id} />) }
+            <div className="productos">
+                {productos.map((prod) => <Item producto={prod} key={prod.id} />)}
+            </div>
         </div>
-    </div>
-)
-}
+    );
+};
 
-export default ItemList
+export default ItemList;
