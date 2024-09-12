@@ -2,7 +2,6 @@ import './App.css'
 import { useState, useEffect } from 'react';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import Saludo from './Components/saludo/Saludo'
 import Navbar from './Components/Navbar/Navbar'
 import Footer from './Components/Footer/Footer'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
