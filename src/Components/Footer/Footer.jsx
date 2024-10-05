@@ -1,9 +1,14 @@
-import './Footer.css'
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className='Footer'>Footer</div>
-    )
+        <footer className='Footer'>
+            <div className='Footer-content'>
+                <p>© {new Date().getFullYear()} Luis Tapari. Todos los derechos reservados.</p>
+                <p>Desarrollado por Luis Tapari</p>
+            </div>
+        </footer>
+    );
 }
 
-export default Footer
+export default Footer;

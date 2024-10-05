@@ -1,3 +1,25 @@
-.Footer{
-    background-color: black;
+.Footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    margin-top: 40px; /* Espacio entre la página principal y el footer */
+}
+
+.Footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.Footer-content p {
+    margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+    .Footer {
+        font-size: 12px;
+    }
 }
