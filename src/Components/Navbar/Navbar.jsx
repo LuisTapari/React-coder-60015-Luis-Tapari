@@ -40,6 +40,13 @@ const Navbar = () => {
                             Promociones
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink 
+                            to="/contact" className={({ isActive }) => isActive ? "link active" : "link"}>
+                            Contacto
+                        </NavLink>
+                    </li>
+                    
                 </ul>
             </div>
             <CartWidget />

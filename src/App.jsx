@@ -11,6 +11,7 @@ import Cart from './Components/Cart/Cart';
 import { db } from './main';
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 import Checkout from './Components/Checkout/Checkout';
+import Contact from './Components/Contact/Contact';
 
 const App = () => {
 
@@ -31,15 +32,17 @@ const App = () => {
     <CartProvider>
     <BrowserRouter>
     <Navbar />
-    
+    <div className='main'>
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
         <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route path="/contact" element={<Contact />} />
         <Route path='/checkout' element={<Checkout/>}/>
         <Route path='/Cart' element={<Cart/>}/>
         <Route path='*' element={<Error/>}/>
       </Routes>
+      </div>
     <Footer />
     </BrowserRouter>
     </CartProvider>

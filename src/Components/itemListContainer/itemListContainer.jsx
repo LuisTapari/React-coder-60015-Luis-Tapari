@@ -34,7 +34,7 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            {loading ? <Spinner/> : <ItemList productos={productos} categoryId={categoryId} />}
+            {loading ? <Spinner className="spinner"/> : <ItemList productos={productos} categoryId={categoryId} />}
         </div>
     );
 };

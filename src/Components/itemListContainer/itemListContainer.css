@@ -4,6 +4,11 @@
     margin: 0 auto;
     padding-top: 40px; /* Espacio para separar el título */
 }
+.container .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .item-list-title {
     text-align: center;
