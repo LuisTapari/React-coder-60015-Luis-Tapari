@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore';
 import { db } from '../../main';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Contact.css';
 
 const Contact = () => {
@@ -22,15 +24,33 @@ const Contact = () => {
 
         try {
             await addDoc(collection(db, 'contacts'), formData);
-            alert('Tu consulta ha sido enviada correctamente');
+            toast.success('Tu consulta ha sido enviada correctamente', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
             setFormData({ name: '', email: '', message: '' });
         } catch (error) {
+            toast.error('Error al enviar la consulta. Por favor, intenta nuevamente', {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+            });
             console.error('Error al enviar la consulta: ', error);
         }
     };
 
     return (
         <div className="contact-container">
+            <ToastContainer />
             <h2 className="contact-title">¡Contáctanos!</h2>
             <p className="contact-description">
                 Si tienes alguna duda o consulta, completa el siguiente formulario y nos pondremos en contacto contigo lo antes posible.
@@ -75,5 +95,6 @@ const Contact = () => {
 };
 
 export default Contact;
+
 
 
